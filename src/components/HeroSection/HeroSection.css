@@ -1,68 +1,129 @@
 .hero-section {
-display: flex;
-align-items: center;
-justify-content: flex-start; /* Բովանդակությունը ձախ կողմում */
-min-height: 100vh; /* Զբաղեցնում է ամբողջ էկրանի բարձրությունը */
-background-image: url('assets/hero-background.png'); /* Ձեր ներբեռնած նկարը */
-background-size: cover; /* Ծածկում է ամբողջ տարածքը */
-background-position: center right; /* Կենտրոնացնում է նկարը աջից */
-color: #fff; 
-padding: 2rem;
+    background: url('public/hero-background.png') ;
+    min-height: 77vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
 }
 
 .hero-content {
-max-width: 500px; /* Սահմանափակում է բովանդակության լայնությունը */
-margin-left: 10%; /* Բովանդակությունը սկսվում է ձախ եզրից ավելի հեռու */
+    max-width: 500px;
+    margin-left: 10%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    color: #fff;
 }
 
 .hero-content h1 {
-font-size: 3.5rem; /* Մեծ տառաչափ վերնագրի համար */
-margin-bottom: 1rem;
-color: #fff; /* Սպիտակ գույն վերնագրի համար */
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
 .hero-content p {
-font-size: 1.2rem;
-line-height: 1.6;
-margin-bottom: 2rem;
-color: #e0e0e0; /* Բաց սպիտակ գույն պարբերության համար */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
 }
 
 .hero-buttons {
-display: flex;
-gap: 1rem; /* Կոճակների միջև տարածություն */
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-padding: 0.8rem 1.8rem;
-border-radius: 50px; /* Կլորացված կոճակներ */
-text-decoration: none;
-font-weight: bold;
-transition: background-color 0.3s ease;
-font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
 .btn-primary {
-background-color: #6a0dad; /* Մանուշակագույն կոճակ */
-color: #fff;
-border: 2px solid #6a0dad;
+    background-color: #6a0dad;
+    color: #fff;
+    border: 2px solid #6a0dad;
 }
 
 .btn-primary:hover {
-background-color: #5a0a9a; /* Մուգ մանուշակագույն hover-ի ժամանակ */
+    background-color: #5a0a9a;
 }
 
 .btn-secondary {
-background-color: #00bcd4; /* Երկնագույն կոճակ */
-color: #fff;
-border: 2px solid #00bcd4;
+    background-color: #00bcd4;
+    color: #fff;
+    border: 2px solid #00bcd4;
 }
 
 .btn-secondary:hover {
-background-color: #00a4b8; /* Մուգ երկնագույն hover-ի ժամանակ */
+    background-color: #00a4b8;
 }
 
-/* Պատկերի համար հատուկ ոճեր, որպեսզի հիշեցնի բնօրինակը */
-/* Հաշվի առնելով, որ այն դրված է background-image-ով, այս հատվածը կառավարվում է background-position-ով */
-/* Եթե ցանկանում եք ավելի ճշգրիտ կառավարում, կարող եք օգտագործել <img> թեգը և դիրքավորել այն CSS-ով */
-/* Այս լուծումը ամենապարզն է HeroSection-ի դեպքում */
+@media (max-width: 1024px) {
+    .hero-content {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-position: center center;
+    }
+
+    .hero-content {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: none;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}

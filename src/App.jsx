@@ -1,14 +1,15 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
-import HeroSection from './components/HeroSection/HeroSection'; // Ներմուծել HeroSection-ը
+import HeroSection from './components/HeroSection/HeroSection'; 
+import ReasonsSection from './components/ReasonsSection/ReasonsSection';
 import './App.css';
 
 const HomePage = () => (
 <>
-<HeroSection /> {/* Ավելացնել HeroSection-ը HomePage-ում */}
-<h2>Գլխավոր Էջ</h2>
+<HeroSection /> 
+ <ReasonsSection />
+
 </>
 );
 const Home = () => <h2>Տուն</h2>;

@@ -1,0 +1,153 @@
+.reasons-section {
+    padding: 60px 20px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.reason-card {
+    flex: 1 1 30%;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.reason-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.reason-card.color-green .reason-number {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.reason-card.color-purple .reason-number {
+    background: linear-gradient(45deg, #a737be, #5d2568);
+}
+
+.reason-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.reason-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .reason-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reasons-section {
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    .cards-container {
+        gap: 20px;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+
+    .reason-card {
+        flex: 1 1 100%;
+        max-width: 400px;
+        padding: 25px;
+    }
+
+    .reason-number {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .reason-card h3 {
+        font-size: 22px;
+    }
+
+    .reason-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reasons-section {
+        padding: 30px 10px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .cards-container {
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .reason-card {
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    .reason-number {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .reason-card h3 {
+        font-size: 20px;
+    }
+
+    .reason-card p {
+        font-size: 14px;
+    }
+}
