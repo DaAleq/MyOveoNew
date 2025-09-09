@@ -1,16 +1,16 @@
 .header {
   width: 100%;
-  background-color: #fff; 
-  border-bottom: 1px solid #eee; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .headerTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px; 
-  background-color: #f8f8f8; 
+  padding: 10px 50px;
+  background-color: #f8f8f8;
   color: #555;
   font-size: 14px;
 }
@@ -20,7 +20,35 @@
   display: inline-flex;
   align-items: center;
 }
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
 
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImage {
+  width: 24px;
+  height: 24px;
+}
+
+.loginText {
+  color: #333;
+  font-size: 16px;
+}
+
+
+.contactInfo span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
 .contactInfo span:last-child {
   margin-right: 0;
 }
@@ -35,20 +63,20 @@
 }
 
 .flag {
-  width: 20px; 
+  width: 20px;
   height: auto;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
 }
 
 .headerDown {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px; 
+  padding: 15px 50px;
 }
 
 .logoImage {
-  width: 120px; 
+  width: 120px;
   height: auto;
 }
 
@@ -75,7 +103,7 @@
   color: #6a1b9a;
 }
 
-.userActions {
+.headerDown .userActions {
   display: flex;
   align-items: center;
 }
@@ -88,7 +116,7 @@
 }
 
 .registerButton {
-  background-color: #6a1b9a; 
+  background-color: #6a1b9a;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -100,5 +128,140 @@
 }
 
 .registerButton:hover {
-  background-color: #4a148c; 
+  background-color: #4a148c;
+}
+
+@media (max-width: 1024px) {
+  .headerTop,
+  .headerDown {
+    padding: 10px 20px;
+  }
+
+  .mainNav li {
+    margin-right: 20px;
+  }
+
+  .mainNav a {
+    font-size: 15px;
+  }
+
+  .logoImage {
+    width: 100px;
+  }
+
+  .registerButton {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+
+  .contactInfo span {
+    margin-right: 10px;
+    font-size: 13px;
+  }
+
+  .userActions .loginText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerTop {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .contactInfo {
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .contactInfo span {
+    margin-right: 5px;
+    white-space: nowrap;
+  }
+
+  .headerTop .userActions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .headerDown {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .logoImage {
+    margin-bottom: 15px;
+    width: 90px;
+  }
+
+  .mainNav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .mainNav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .mainNav a {
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+  }
+
+  .headerDown .userActions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .loginIcon {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .registerButton {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .languageSelector {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInfo span {
+    font-size: 12px;
+    margin-right: 3px;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .headerTop .userActions .loginText {
+    display: none;
+  }
+
+  .userActions .userImage {
+    margin-right: 5px;
+  }
+
+  .mainNav a {
+    font-size: 13px;
+  }
+
+  .registerButton {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }

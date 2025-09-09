@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import ArmenaFlag from '../../assets/ovio-logo.svg';
+import UserIcon from '../../assets/user.png'; 
 
 const HeaderDown = () => {
   return (
     <div className={styles.headerDown}>
       <div className={styles.logo}>
-        <img src="/ovio-logo.png" alt="OVIO Logo" className={styles.logoImage} />
+        <img src={ArmenaFlag} alt="OVIO Logo" className={styles.logoImage} />
       </div>
       <nav className={styles.mainNav}>
         <ul>
@@ -19,7 +21,8 @@ const HeaderDown = () => {
         </ul>
       </nav>
       <div className={styles.userActions}>
-        <span className={styles.loginIcon}>Մուտք</span> {/* Կարող է լինել icon */}
+        <img src={UserIcon} alt="User Icon" className={styles.userImage} /> 
+        <span className={styles.loginText}>Մուտք</span>
         <button className={styles.registerButton}>Միացեք հիմա</button>
       </div>
     </div>

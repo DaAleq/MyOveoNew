@@ -1,0 +1,68 @@
+.hero-section {
+display: flex;
+align-items: center;
+justify-content: flex-start; /* Բովանդակությունը ձախ կողմում */
+min-height: 100vh; /* Զբաղեցնում է ամբողջ էկրանի բարձրությունը */
+background-image: url('assets/hero-background.png'); /* Ձեր ներբեռնած նկարը */
+background-size: cover; /* Ծածկում է ամբողջ տարածքը */
+background-position: center right; /* Կենտրոնացնում է նկարը աջից */
+color: #fff; 
+padding: 2rem;
+}
+
+.hero-content {
+max-width: 500px; /* Սահմանափակում է բովանդակության լայնությունը */
+margin-left: 10%; /* Բովանդակությունը սկսվում է ձախ եզրից ավելի հեռու */
+}
+
+.hero-content h1 {
+font-size: 3.5rem; /* Մեծ տառաչափ վերնագրի համար */
+margin-bottom: 1rem;
+color: #fff; /* Սպիտակ գույն վերնագրի համար */
+}
+
+.hero-content p {
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 2rem;
+color: #e0e0e0; /* Բաց սպիտակ գույն պարբերության համար */
+}
+
+.hero-buttons {
+display: flex;
+gap: 1rem; /* Կոճակների միջև տարածություն */
+}
+
+.btn {
+padding: 0.8rem 1.8rem;
+border-radius: 50px; /* Կլորացված կոճակներ */
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease;
+font-size: 1rem;
+}
+
+.btn-primary {
+background-color: #6a0dad; /* Մանուշակագույն կոճակ */
+color: #fff;
+border: 2px solid #6a0dad;
+}
+
+.btn-primary:hover {
+background-color: #5a0a9a; /* Մուգ մանուշակագույն hover-ի ժամանակ */
+}
+
+.btn-secondary {
+background-color: #00bcd4; /* Երկնագույն կոճակ */
+color: #fff;
+border: 2px solid #00bcd4;
+}
+
+.btn-secondary:hover {
+background-color: #00a4b8; /* Մուգ երկնագույն hover-ի ժամանակ */
+}
+
+/* Պատկերի համար հատուկ ոճեր, որպեսզի հիշեցնի բնօրինակը */
+/* Հաշվի առնելով, որ այն դրված է background-image-ով, այս հատվածը կառավարվում է background-position-ով */
+/* Եթե ցանկանում եք ավելի ճշգրիտ կառավարում, կարող եք օգտագործել <img> թեգը և դիրքավորել այն CSS-ով */
+/* Այս լուծումը ամենապարզն է HeroSection-ի դեպքում */
